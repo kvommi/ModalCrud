@@ -1,0 +1,9 @@
+  <tr id = "<%= dom_id user%>">
+    <td><%= user.user_name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.password %></td>
+    <td><%= user.account_type %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user), :remote => true %></td>
+    <td><%= link_to 'Destroy', user, :remote => true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>

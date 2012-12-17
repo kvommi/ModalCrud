@@ -1,0 +1,32 @@
+<h1>Listing users</h1>
+
+<table id = "users">
+
+  <tr>
+    <th>User name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Account type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+    <%= render user %>
+<% end %>
+
+</table>
+
+<h2>User Input</h2>
+<div id="form">
+ <%= render :partial => "form"%>
+</div> 
+
+<br />
+
+<button id="create-user">Create new user</button>
+
+<div id="form" title="Create new user"><%= render :partial => "form"%></div>
+
+<div id="update-form" title="Update the user"><%= render :partial => "form"%></div>
