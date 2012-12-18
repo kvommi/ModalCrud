@@ -3,7 +3,28 @@
     <td><%= user.email %></td>
     <td><%= user.password %></td>
     <td><%= user.account_type %></td>
-    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Show', user, :remote=>true%></td>
     <td><%= link_to 'Edit', edit_user_path(user), :remote => true %></td>
-    <td><%= link_to 'Destroy', user, :remote => true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <td><%= link_to 'Destroy', user, :remote => true, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td> 
+    <div id = "show-form" title="User Information">
+    <p>
+    <b>User name:</b>
+      <%= user.user_name %>
+    </p>
+ 
+    <p>
+    <b>Email:</b>
+      <%= user.email %>
+    </p>
+
+    <p>
+    <b>Password:</b>
+      <%= user.password %>
+    </p>
+
+    <p>
+    <b>Account type:</b>
+      <%= user.account_type %>
+    </p></div>
+    </tr>

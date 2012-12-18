@@ -45,12 +45,27 @@ $(document).ready(function(){
             resizable:false,
             buttons: {
                 "Update an account": function() {
-                    $(".edit_user").submit();
+                   $(".edit_user").submit();
                    $(".new_user")[0].reset();
                    $( this ).dialog( "close" );
                 },
                 Cancel: function() {
                 	$("#new_user")[0].reset();
+                    $( this ).dialog( "close" );
+                }
+            }
+        })
+        
+        $( "#show-form" ).dialog({
+            autoOpen: false,
+            height: 400,
+            width: 350,
+            modal: true,
+            closeOnEscape: true,
+            resizable:false,
+            buttons: {
+                Cancel: function() {
+                	//$("#new_user")[0].reset();
                     $( this ).dialog( "close" );
                 }
             }
